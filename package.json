@@ -1,6 +1,6 @@
 {
   "name": "language-mavl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MAVL toy language support in Atom",
   "engines": {
     "atom": "*"
