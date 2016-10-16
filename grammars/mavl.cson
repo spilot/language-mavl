@@ -1,0 +1,68 @@
+'scopeName': 'source.mavl'
+'name': 'MAVL'
+'fileTypes': ['mavl', 'MAVL']
+
+'patterns': [
+  {
+    'name': 'comment.line.double-slash.mavl'
+    'begin': '//'
+    'end': '$'
+  },
+  {
+    'name': 'storage.type.mavl'
+    'match': '\\b(int|string|float|matrix|vector|bool|void)\\b'
+  },
+  {
+    'name': 'meta.type_params.mavl'
+    'match': '<[int|string|float|matrix|vector|bool]>'
+    #'begin': '<(?![=<])'
+    #'end': '>'
+  },
+  {
+    'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
+    'name': 'constant.numeric.mavl'
+  },
+  {
+    'begin': '\"'
+    'end': '\"'
+    'name': 'string.quoted.double.mavl'
+  },
+  {
+    'begin': '\''
+    'end': '\''
+    'name': 'string.quoted.single.mavl'
+  },
+  {
+    'name': 'keyword.control.mavl'
+    'match': '\\b(return|for|if|else)\\b'
+  },
+  {
+    'name': 'constant.lang.boolean.mavl'
+    'match': '\\b(true|false)\\b'
+  },
+  {
+    'name': 'storage.modifier.mavl'
+    'match': '\\b(var|val)\\b'
+  },
+  {
+    'name': 'keyword.operator.comparison.mavl'
+    'match': '(<=|>=|<|>|==|!=|\\|\\||&&)'
+  },
+  {
+    'name': 'keyword.operator.assignment'
+    'match': '(=)'
+  },
+  {
+    'name': 'keyword.operator.arithmetic'
+    'match': '(\\+|-|\\*|/|#)'
+  },
+  {
+    'match': '\\b(function)\\s+(\\w+)\\s*\\(.*\\)'
+    'captures':
+      '1':
+        'name': 'keyword.control.mavl'
+      '2':
+        'name': 'entity.name.function.mavl'
+      'name': 'meta.function.mavl'
+  }
+]
